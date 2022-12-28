@@ -1,0 +1,78 @@
+.footer {
+  background-color: lightgray;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: end;
+}
+
+
+
+.footer {
+  font-family: 'Titillium Web';
+
+  font-weight: 600;
+}
+
+.footer * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+/* .fr li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 1em;
+    paddin: 0;
+  }
+   */
+/* .footer button {
+    padding: .5em .8em;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  } */
+
+.footer button::before,
+.footer button::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.footer button::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #0044ff;
+  border-right: 3px solid  #0051ff;
+  transform: translate(-100%, 50%);
+}
+
+.footer button:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #0051ff;
+  border-left: 3px solid #0051ff;
+  transform: translate(100%, -50%)
+}
+
+.footer button:hover:before,
+.footer button:hover:after {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.fr:hover {
+  color:  #0051ff
+}
+.ip{
+  margin-right: 100%;
+}

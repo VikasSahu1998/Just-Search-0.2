@@ -1,0 +1,4 @@
+/* Row hover bakground */
+mat-card :hover {
+    background-color: gray;
+}

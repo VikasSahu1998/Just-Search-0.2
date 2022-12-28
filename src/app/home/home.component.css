@@ -1,0 +1,15 @@
+.size {
+    width: 20%;
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.search {
+    width: 30%;
+}
+
+.Country {
+    margin-left: 30%;
+    width: 10%;
+}
