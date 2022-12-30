@@ -30,6 +30,9 @@ import { MatCommonModule, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { OnDemandServicesFilComponent } from './SideNavBar/on-demand-services-fil/on-demand-services-fil.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { AutoCareComponent } from './SideNavBar/auto-care/auto-care.component';
+import { AutoMobileComponent } from './SideNavBar/auto-mobile/auto-mobile.component';
+import { LoansComponent } from './SideNavBar/loans/loans.component';
 
 
 
@@ -43,6 +46,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     CategoriesComponent,
     AirTicketComponent,
     OnDemandServicesFilComponent,
+    AutoCareComponent,
+    AutoMobileComponent,
+    LoansComponent,
   ],
   imports: [
     BrowserModule,

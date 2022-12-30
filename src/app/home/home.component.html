@@ -1,68 +1,88 @@
-<div class="example-container" cdkScrollable>
-  <form class="example-form">
-    <div>
-      <img src="assets/just-search-logo.png" alt="Google" srcset="" class="size">
+<section cdkScrollable>
+  <div class="container-fluid">
+    <div class="row">
+      <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)" align="end">
+        <mat-icon>{{ mode }}</mat-icon>
+      </mat-slide-toggle>
     </div>
-    <br>
+  </div>
+</section>
+<section cdkScrollable>
+  <div class="container" >
+    <img src="assets/just-search-logo.png" alt="Google" srcset="" class="size">
+    <span><br></span>
+    <form class="row example-form">
 
-    <div>
-      <mat-form-field  matPrefix appearance="outline" class="Country">
-        <mat-icon matPrefix> location_on</mat-icon>
-        <mat-label>Country</mat-label>
-        <input type="text"  aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name.common">
-           {{option.name.common}}
-          </mat-option>
-        </mat-autocomplete>
-      </mat-form-field>
+      <div class="col-12 input-group">
+        <mat-form-field matPrefix appearance="outline" class="Country ">
+          <mat-icon matPrefix> location_on</mat-icon>
+          <input type="text" aria-label="Number" placeholder="Country" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name.common">
+              {{option.name.common}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
 
-      <mat-form-field class="search" appearance="outline">
-        <input matInput #movieSearchInput placeholder="Just-Search">
-        <mat-icon matSuffix>zoom_in</mat-icon>
-        <mat-icon matSuffix>mic_none</mat-icon>
-      </mat-form-field>
-    </div>
+        <mat-form-field class="search" appearance="outline">
+          <input matInput #movieSearchInput placeholder="Just-Search">
+          <mat-icon matSuffix>zoom_in</mat-icon>
+          <!-- <mat-icon matSuffix>mic_none</mat-icon> -->
+        </mat-form-field>
+      </div>
 
+    </form>
+  </div>
+</section>
+<section cdkScrollable>
+  <div class="container">
     <div class="row" *ngIf="isSearching">
       <div class="col-12 text-center">
-
         <h4>Searching ... </h4>
-
       </div>
     </div>
     <div class="row">
       <ng-container *ngIf="apiResponse['Response'] == 'False'; else elseTemplate">
-
         <div class="col-12 text-center">
           <div class="alert alert-danger" role="alert">
             {{apiResponse['Error']}}
-
           </div>
         </div>
-
       </ng-container>
       <ng-template #elseTemplate>
 
 
-        <div class="col-12" *ngFor="let movie of apiResponse['Search']" style="margin-left: 35%;">
+        <div class="col-12" *ngFor="let movie of apiResponse['Search']">
 
-          <div class="card w-25" style="margin:5px;">
-            <!-- <img class="card-img-top" src="{{movie['Poster']}}"> -->
+          <!-- <div class="card w-25" style="margin:5px;">
+            <img class="card-img-top" src="{{movie['Poster']}}">
             <div class="card-body">
               <h5 class="card-title">{{movie['Title']}}</h5>
               <p class="card-text">Year: {{movie['Year']}}</p>
             </div>
-          </div>
+          </div> -->
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title-group>
+                <mat-card-title>{{movie['Title']}}</mat-card-title>
+                <mat-card-subtitle>Year: {{movie['Year']}}</mat-card-subtitle>
+                <img mat-card-sm-image src="{{movie['Poster']}}" >
+              </mat-card-title-group>
+            </mat-card-header>
+            <!-- <mat-card-content>
+              {{movie['Year']}}
+            </mat-card-content> -->
+            <span><br></span>
+          </mat-card>
+         
         </div>
 
       </ng-template>
     </div>
-  </form>
-  <span><br><br><br></span>
-</div>
-
-
+  </div>
+  <span><br><br></span>
+</section>
 <!-- <div style="margin: 50px;">
 
     <div class="container" style="text-align:center">
@@ -110,7 +130,3 @@
     </div>
   
   </div> -->
-
-  <mat-slide-toggle [(ngModel)]="isChecked" (change)="changed($event)">
-    <mat-icon>{{ mode }}</mat-icon>
-  </mat-slide-toggle>
