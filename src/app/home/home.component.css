@@ -8,16 +8,21 @@
 .search {
     width: 40%;
     margin-right: auto;
-} 
+}
 
 .Country {
-    width: 10%;
+    width: 12%;
     margin-left: auto;
 }
+
 .example-card {
     max-width: 400px;
     margin-bottom: 15px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
+}
+.img1{
+ 
+    width: 50px;
+    height: 50px;
+}
