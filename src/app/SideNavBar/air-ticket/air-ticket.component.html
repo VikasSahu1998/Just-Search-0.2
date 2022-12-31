@@ -1,152 +1,145 @@
-
 <section>
-<div class="container"><div class="row"><ul class="nav justify-content-center">
+    <div class="container">
+        <div class="row">
+            <ul class="nav justify-content-center">
 
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Flight</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Hotel</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Bus</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Cab</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Train</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Visa Assistance</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">Foreign Exchange</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" routerLink="/ComingSoon">International Sim Card</a>
-    </li>
-    
-</ul></div></div>
-</section>
-<span><br></span>
-<span><br></span>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Flight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Cab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Visa Assistance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Foreign Exchange</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">International Sim Card</a>
+                </li>
 
-<div class="container">
-    <h1 align="center">BOOK FLIGHT TICKETS</h1>
-</div>
-
-
-<mat-card class="example-card container">
-    <span><br></span>
-    <span><br></span>
-
-
-
-    <form [formGroup]="airticketForm" novalidate (ngSubmit)="onAirticketSubmit()" class="d-flex-center row">
-        <table class="example-full-width" cellspacing="0" class="col">
-            <tr>
-                <td>
-                    <mat-form-field appearance="outline" class="col-6">
-                        <mat-select formControlName="toppings" Single>
-                            <mat-option *ngFor="let topping of toppingList" 
-                            [value]="topping">{{topping.name}}</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </td>
-              
-                <td>
-                    <mat-form-field appearance="outline" class="col-6">
-                        <mat-select formControlName="class" Single>
-                            <mat-option *ngFor="let classLists of classList"
-                                [value]="classLists">{{classLists.name}}</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </td>
-            </tr>
-
-        </table>
-        <table class="example-full-width" cellspacing="0">
-
-            <tr>
-                <td>
-                    <!-- input type Name -->
-                    <mat-form-field appearance="outline">
-                        <mat-label>Leaving From</mat-label>
-                        <input matInput placeholder="Type Departure City" formControlName="LeavingFrom">
-                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-
-                        <mat-error
-                            *ngIf="airticketForm.get('LeavingFrom')?.invalid && (airticketForm.get('LeavingFrom')?.dirty || airticketForm.get('LeavingFrom')?.touched) && airticketForm.get('LeavingFrom')?.errors?.required">
-                            Leaving From is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-                </td>
-                <td>
-                    <!-- input type Name -->
-                    <mat-form-field appearance="outline">
-                        <mat-label>Going To</mat-label>
-                        <input matInput placeholder="Type Destination City" formControlName="GoingTo">
-                        <mat-icon matSuffix>perm_identity</mat-icon>
-
-                        <mat-error
-                            *ngIf="airticketForm.get('GoingTo')?.invalid && (airticketForm.get('GoingTo')?.dirty || airticketForm.get('GoingTo')?.touched) && airticketForm.get('GoingTo')?.errors?.required">
-                            Going To is <strong>required</strong>
-                        </mat-error>
-                    </mat-form-field>
-                </td>
-            </tr>
-        </table>
-        <!-- input type Name -->
-        <mat-form-field  appearance="outline">
-            <mat-label>Enter a date range</mat-label>
-            <mat-date-range-input  [rangePicker]="picker">
-                <input matStartDate placeholder="Start date">
-                <input matEndDate placeholder="End date">
-            </mat-date-range-input>
-            <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
-            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-date-range-picker #picker></mat-date-range-picker>
-        </mat-form-field>
-
-   <div class="row butt1">
-    <div class="col">
-        <span>Adults</span>
-        <button mat-button class="plusminus" (click)="handleMinus()">-</button>
-        <span>{{value}}</span>
-        <button mat-button class="plusminus" (click)="handlePlus()">+</button>
-    </div><div class="col">
-        <span>Children</span>
-        <button mat-button class="plusminus" (click)="handleMinus()">-</button>
-        <span>{{value}}</span>
-        <button mat-button class="plusminus" (click)="handlePlus()">+</button>
-        <h6>Aged 2-11</h6>
-    </div><div class="col">
-        <span>Infants</span>
-        <button mat-button class="plusminus" (click)="handleMinus()">-</button>
-        <span>{{value}}</span>
-        <button mat-button class="plusminus" (click)="handlePlus()">+</button>
-        <h6>In seat</h6></div>
-        <div class="col">
-        <span>Infants</span>
-        <button mat-button class="plusminus" (click)="handleMinus()">-</button>
-        <span>{{value}}</span>
-        <button mat-button class="plusminus" (click)="handlePlus()">+</button>
-        <h6>On lap</h6>
+            </ul>
         </div>
     </div>
+</section>
 
-        <mat-divider></mat-divider>
-        <!-- button Submit -->
-        <mat-card-actions>
-            <button class="butt1" mat-raised-button color="primary" mat-button>Submit Requirement</button>
-        </mat-card-actions>
-    </form>
-</mat-card>
+<span><br></span>
+<span><br></span>
+<section>
 
+    <div class="container">
+        <span><br></span>
+        <mat-card class="example-card container">
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>BOOK FLIGHT TICKETS</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="airticketForm" novalidate (ngSubmit)="onAirticketSubmit()" class="d-flex-center">
 
+                    <div class="example-form-fields">
+                        <mat-form-field class="example-full-width" appearance="outline" >
+                            <mat-select formControlName="toppings" Single>
+                                <mat-option *ngFor="let topping of toppingList"
+                                    [value]="topping">{{topping.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
 
-          
-          
+                        <mat-form-field class="example-full-width" appearance="outline" >
+                            <mat-select formControlName="class" Single>
+                                <mat-option *ngFor="let classLists of classList"
+                                    [value]="classLists">{{classLists.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-form-fields">
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Leaving From</mat-label>
+                            <input matInput placeholder="Type Departure City" formControlName="LeavingFrom">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
 
+                            <mat-error
+                                *ngIf="airticketForm.get('LeavingFrom')?.invalid && (airticketForm.get('LeavingFrom')?.dirty || airticketForm.get('LeavingFrom')?.touched) && airticketForm.get('LeavingFrom')?.errors?.required">
+                                Leaving From is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
 
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Going To</mat-label>
+                            <input matInput placeholder="Type Destination City" formControlName="GoingTo">
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+
+                            <mat-error
+                                *ngIf="airticketForm.get('GoingTo')?.invalid && (airticketForm.get('GoingTo')?.dirty || airticketForm.get('GoingTo')?.touched) && airticketForm.get('GoingTo')?.errors?.required">
+                                Going To is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-form-fields">
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Enter a date range</mat-label>
+                            <mat-date-range-input [rangePicker]="picker">
+                                <input matStartDate placeholder="Start date">
+                                <input matEndDate placeholder="End date">
+                            </mat-date-range-input>
+                            <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-date-range-picker #picker></mat-date-range-picker>
+                        </mat-form-field>
+                    </div>
+                    
+                        <div class="row ">
+                            <div class="col-3">
+                                <span>Adults</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                            </div>
+                            <div class="col-3">
+                                <span>Children</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>Aged 2-11</h6>
+                            </div>
+                            <div class="col-3">
+                                <span>Infants</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>In seat</h6>
+                            </div>
+                            <div class="col-3">
+                                <span>Infants</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>On lap</h6>
+                            </div>
+                        </div>
+                   
+                    <mat-divider></mat-divider>
+                    <!-- button Submit -->
+                    <mat-card-actions>
+                        <button class="butt1" mat-raised-button color="primary" mat-button>Submit Requirement</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>

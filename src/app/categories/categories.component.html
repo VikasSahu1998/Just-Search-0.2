@@ -1,31 +1,30 @@
-<div class="container" cdkScrollable>
-    <mat-card class="example-card">
-        <span><br></span>
-        <mat-card-header class="butt1">
-            <mat-card-title color="primary">
-                <h1>Tell us what you Need</h1>
-            </mat-card-title>
-        </mat-card-header>
-        <span><br></span>
-        <form [formGroup]="categoriesForm" novalidate (ngSubmit)="oncategoriesubmit()" class="d-flex-center">
-            <!-- input type Name -->
-            <mat-form-field class="example-full-width1" appearance="outline">
-                <mat-label>Product Name</mat-label>
-                <input matInput placeholder="Enter Product/Service Name" formControlName="product">
-                <mat-icon matSuffix>perm_identity</mat-icon>
+<section>
+    <div class="container">
+        <mat-card class="example-card container">
+            <span><br></span>
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>Tell us what you Need</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="categoriesForm" novalidate (ngSubmit)="oncategoriesubmit()" class="d-flex-center">
+                    <!-- input type Name -->
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Name</mat-label>
+                        <input matInput placeholder="Enter Product/Service Name" formControlName="product">
+                        <mat-icon matSuffix>perm_identity</mat-icon>
 
-                <mat-error
-                    *ngIf="categoriesForm.get('product')?.invalid && (categoriesForm.get('product')?.dirty || categoriesForm.get('product')?.touched) && categoriesForm.get('product')?.errors?.required">
-                    product is <strong>required</strong>
-                </mat-error>
-            </mat-form-field>
+                        <mat-error
+                            *ngIf="categoriesForm.get('product')?.invalid && (categoriesForm.get('product')?.dirty || categoriesForm.get('product')?.touched) && categoriesForm.get('product')?.errors?.required">
+                            product is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
 
-            <table class="example-full-width" cellspacing="0">
-
-                <tr>
-                    <td>
+                    <div class="example-form-fields">
                         <!-- input type Name -->
-                        <mat-form-field appearance="outline">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>Full Name</mat-label>
                             <input matInput placeholder="Enter your name" formControlName="name">
                             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -35,10 +34,9 @@
                                 Name is <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
-                    </td>
-                    <td>
+
                         <!-- input type email -->
-                        <mat-form-field appearance="outline">
+                        <mat-form-field class="example-full-width" appearance="outline">
                             <mat-label>E-Mail</mat-label>
                             <input matInput placeholder="E-Mail" formControlName="email">
                             <mat-icon matSuffix>alternate_email</mat-icon>
@@ -52,43 +50,45 @@
                                 Email is <strong>required</strong>
                             </mat-error>
                         </mat-form-field>
-                    </td>
-                </tr>
-            </table>
-            <mat-divider></mat-divider>
-            <!-- button Submit -->
-            <mat-card-actions>
-                <button class="butt1" mat-raised-button color="primary" mat-button>Submit Requirement</button>
-            </mat-card-actions>
-        </form>
-    </mat-card>
+                    </div>
 
+                    <mat-divider></mat-divider>
+                    <!-- button Submit -->
+                    <mat-card-actions>
+                        <button class="butt1" mat-raised-button color="primary" mat-button>Submit Requirement</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>
 
-
+<section>
     <div class="container">
         <h1>Popular Services</h1>
         <div class="row">
             <div class="col-sm-3" *ngFor="let card of cards" routerLink="/ComingSoon">
-                
-                <div class="card mb-3" style="max-width: 400px;">
+                <mat-card class="card mb-3" style="max-width: 400px;">
+
                     <div class="row g-0">
-                        
+
                         <div class="col-md-4">
-                            
+
                             <img [src]="card.img" class="img-fluid rounded-start" alt="card">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h3 class="card-title" routerLink="/ComingSoon"><b>{{card.title}}</b></h3>
-                               <p class="card-text" routerLink="/ComingSoon"> {{card.description1}}</p>
-                               <p class="card-text" routerLink="/ComingSoon"> {{card.description2}}</p>
-                               <p class="card-text" routerLink="/ComingSoon"> {{card.description3}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{card.description1}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{card.description2}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{card.description3}}</p>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                </mat-card>
             </div>
         </div>
-        
         <span><br><br><br></span>
     </div>
+</section>

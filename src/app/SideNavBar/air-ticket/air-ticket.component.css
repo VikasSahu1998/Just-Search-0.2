@@ -1,15 +1,9 @@
 .example-card {
-    max-width: 50%;
+    max-width: 65%;
     display: flex;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 4%;
     margin-bottom: 10%;
-}
-
-mat-form-field {
-    padding: 10px;
-    width: 100%;
-
 }
 
 .butt1 {
@@ -22,13 +16,22 @@ mat-form-field {
 .example-full-width {
     width: 100%;
     align-items: center;
-    padding: 5px;
 }
-a{
+
+
+a {
     color: black;
-    }
-    .nav{
-        margin-top: 2%;
-    }
+}
 
+.nav {
+    margin-top: 2%;
+}
 
+.example-form-fields {
+    display: flex;
+    align-items: flex-start;
+}
+
+.example-container mat-form-field+mat-form-field {
+    margin-left: 10px;
+}
