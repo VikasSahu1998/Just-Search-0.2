@@ -33,6 +33,15 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AutoCareComponent } from './SideNavBar/auto-care/auto-care.component';
 import { AutoMobileComponent } from './SideNavBar/auto-mobile/auto-mobile.component';
 import { LoansComponent } from './SideNavBar/loans/loans.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { ShoppingComponent } from './SideNavBar/shopping/shopping.component';
+import { TrainComponent } from './SideNavBar/train/train.component';
+import { BookComponent } from './SideNavBar/book/book.component';
+import { BabyCareComponent } from './SideNavBar/baby-care/baby-care.component';
 
 
 
@@ -49,6 +58,10 @@ import { LoansComponent } from './SideNavBar/loans/loans.component';
     AutoCareComponent,
     AutoMobileComponent,
     LoansComponent,
+    ShoppingComponent,
+    TrainComponent,
+    BookComponent,
+    BabyCareComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +89,10 @@ import { LoansComponent } from './SideNavBar/loans/loans.component';
     MatNativeDateModule,
     ToastrModule.forRoot(),
     MatSlideToggleModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [],
   bootstrap: [AppComponent]

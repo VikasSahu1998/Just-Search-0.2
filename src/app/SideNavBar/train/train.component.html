@@ -1,0 +1,145 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/AirTicket">Flight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Cab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/Train">Train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Visa Assistance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Foreign Exchange</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">International Sim Card</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<span><br></span>
+<span><br></span>
+<section>
+
+    <div class="container">
+        <span><br></span>
+        <mat-card class="example-card container">
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>BOOK TRAIN TICKETS</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="TrainticketForm" novalidate (ngSubmit)="onTrainticketSubmit()" class="d-flex-center">
+
+                    <div class="example-form-fields">
+                        <mat-form-field class="example-full-width" appearance="outline" >
+                            <mat-select formControlName="toppings" Single>
+                                <mat-option *ngFor="let topping of toppingList"
+                                    [value]="topping">{{topping.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="outline" >
+                            <mat-select formControlName="class" Single>
+                                <mat-option *ngFor="let classLists of classList"
+                                    [value]="classLists">{{classLists.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-form-fields">
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Leaving From</mat-label>
+                            <input matInput placeholder="Type Departure City" formControlName="LeavingFrom">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                            <mat-error
+                                *ngIf="TrainticketForm.get('LeavingFrom')?.invalid && (TrainticketForm.get('LeavingFrom')?.dirty || TrainticketForm.get('LeavingFrom')?.touched) && TrainticketForm.get('LeavingFrom')?.errors?.required">
+                                Leaving From is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Going To</mat-label>
+                            <input matInput placeholder="Type Destination City" formControlName="GoingTo">
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+
+                            <mat-error
+                                *ngIf="TrainticketForm.get('GoingTo')?.invalid && (TrainticketForm.get('GoingTo')?.dirty || TrainticketForm.get('GoingTo')?.touched) && TrainticketForm.get('GoingTo')?.errors?.required">
+                                Going To is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="example-form-fields">
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Enter a date range</mat-label>
+                            <mat-date-range-input [rangePicker]="picker">
+                                <input matStartDate placeholder="Start date">
+                                <input matEndDate placeholder="End date">
+                            </mat-date-range-input>
+                            <mat-hint>MM/DD/YYYY - MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-date-range-picker #picker></mat-date-range-picker>
+                        </mat-form-field>
+                    </div>
+                    
+                        <div class="row ">
+                            <div class="col-3">
+                                <span>Adults</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                            </div>
+                            <div class="col-3">
+                                <span>Children</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>Aged 2-11</h6>
+                            </div>
+                            <div class="col-3">
+                                <span>Infants</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>In seat</h6>
+                            </div>
+                            <div class="col-3">
+                                <span>Infants</span>
+                                <button mat-button class="plusminus" (click)="handleMinus()">-</button>
+                                <span>{{value}}</span>
+                                <button mat-button class="plusminus" (click)="handlePlus()">+</button>
+                                <h6>On lap</h6>
+                            </div>
+                        </div>
+                   
+                    <mat-divider></mat-divider>
+                    <!-- button Submit -->
+                    <mat-card-actions>
+                        <button class="butt1" mat-raised-button color="primary" mat-button>SEARCH</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>

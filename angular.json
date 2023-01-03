@@ -98,9 +98,18 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
               "node_modules/ngx-toastr/toastr.css"
-
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Just-Search-0.2:build:production",
+            "firebaseProject": "my-project-507f0",
+            "firebaseHostingSite": "my-project-507f0"
           }
         }
       }

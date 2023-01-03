@@ -14,11 +14,15 @@ export class ApiService {
   }
 
   postCategories(data: any) {
-    return this.http.post<any>("http://localhost:3000/need/", data);
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/clientNeed.json/", data);
   }
 
   postAirticket(data: any) {
-    return this.http.post<any>("http://localhost:3000/Airticket/", data);
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/Airticket.json/", data);
+  }
+
+  postTrain(data: any) {
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/train.json/", data);
   }
   getLogin() {
     return this.http.get<any>("http://localhost:3000/signup/");

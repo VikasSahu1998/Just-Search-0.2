@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-project-507f0": {
+      "hosting": {
+        "Just-Search-0.2": [
+          "my-project-507f0"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-project-507f0"
+  }
+}
