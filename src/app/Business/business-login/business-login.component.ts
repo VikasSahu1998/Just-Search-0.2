@@ -1,27 +1,20 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
-import { SignUpComponent } from '../sign-up/sign-up.component';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../shared/api.service';
 import { ToastrService } from 'ngx-toastr';
-
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  selector: 'app-business-login',
+  templateUrl: './business-login.component.html',
+  styleUrls: ['./business-login.component.scss']
 })
-export class SignInComponent {
-
+export class BusinessLoginComponent {
 
   public showPassword: boolean = false;
   singinForm: FormGroup | any;
 
-  constructor(private formbuilder: FormBuilder, private router: Router,private toastr: ToastrService,
-     public dialog: MatDialog, private http: HttpClient, private dialogref: MatDialogRef<SignInComponent>, private api: ApiService) { }
+  constructor(private formbuilder: FormBuilder,private router: Router, private toastr: ToastrService, private api: ApiService) { }
   ngOnInit(): void {
     this.singinForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -70,7 +63,7 @@ export class SignInComponent {
         if (user) {
           this.toastr.success('Signin successfully', 'successfully', { timeOut: 2000, });
           this.singinForm.reset();
-          this.dialogref.close('save');
+          
           this.router.navigate(['Home']);
 
         } else {
@@ -83,7 +76,5 @@ export class SignInComponent {
       )
   }
 
-  close(){
-    this.dialogref.close();
-  }
+ 
 }

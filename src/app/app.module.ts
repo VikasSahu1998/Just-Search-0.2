@@ -42,6 +42,8 @@ import { ShoppingComponent } from './SideNavBar/shopping/shopping.component';
 import { TrainComponent } from './SideNavBar/train/train.component';
 import { BookComponent } from './SideNavBar/book/book.component';
 import { BabyCareComponent } from './SideNavBar/baby-care/baby-care.component';
+import { BusinessLoginComponent } from './Business/business-login/business-login.component';
+import { BusinessHomeComponent } from './Business/business-home/business-home.component';
 
 
 
@@ -62,6 +64,8 @@ import { BabyCareComponent } from './SideNavBar/baby-care/baby-care.component';
     TrainComponent,
     BookComponent,
     BabyCareComponent,
+    BusinessLoginComponent,
+    BusinessHomeComponent,
   ],
   imports: [
     BrowserModule,
