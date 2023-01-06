@@ -1,17 +1,17 @@
 .size {
-    width: 30%;
+    width: 20%;
     display: flex;
     margin: 0 auto;
+    padding-top: 10%;
 }
 
-
 .search {
-    width: 40%;
+    width: 30%;
     margin-right: auto;
 }
 
 .Country {
-    width: 12%;
+    width: 10%;
     margin-left: auto;
 }
 

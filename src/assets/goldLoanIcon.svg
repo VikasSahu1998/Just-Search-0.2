@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <g data-name="gold loan">
+        <path data-name="Rectangle 34653" style="fill:none" d="M0 0h36v36H0z"/>
+        <path data-name="Rectangle 6234" d="M0 0h34.56v34.56H0z" transform="translate(.72 .72)" style="fill:none"/>
+        <g data-name="Group 43783">
+            <path data-name="Path 20679" d="m175.96 176-1.96 6.217h11.761L183.8 176z" transform="translate(-161.882 -167.243)" style="fill-rule:evenodd;fill:#ffda8f"/>
+            <path data-name="Path 20680" d="M101.8 262.669h-7.84L92 268.884h11.761z" transform="translate(-85.402 -248.082)" style="fill:#ffc144;fill-rule:evenodd"/>
+            <path data-name="Path 20681" d="m257.96 262.669-1.96 6.215h11.761l-1.96-6.215h-7.841z" transform="translate(-238.361 -248.082)" style="fill-rule:evenodd;fill:#ffda8f"/>
+            <path data-name="Path 20682" d="M183.8 349.336h-7.84l-1.96 6.215h11.761z" transform="translate(-161.882 -328.921)" style="fill:#ffc144;fill-rule:evenodd"/>
+            <path data-name="Path 20683" d="m339.96 349.336-1.96 6.215h11.761l-1.96-6.215h-7.841z" transform="translate(-314.841 -328.921)" style="fill:#ffc144;fill-rule:evenodd"/>
+            <path data-name="Path 20684" d="m21.761 355.551-1.96-6.215H11.96L10 355.551z" transform="translate(-8.923 -328.921)" style="fill-rule:evenodd;fill:#ffda8f"/>
+        </g>
+        <path data-name="Path 20685" d="M39.5 189.449a.346.346 0 0 0 .051-.307l-1.882-5.967a.343.343 0 0 0-.328-.241h-3.517l-1.806-5.726a.343.343 0 0 0-.328-.241h-3.511l-1.806-5.726a.343.343 0 0 0-.328-.241h-7.527a.343.343 0 0 0-.328.241l-1.806 5.726h-3.511a.343.343 0 0 0-.328.241l-1.806 5.726H7.227a.343.343 0 0 0-.328.241l-1.882 5.967a.344.344 0 0 0 .328.448h33.872a.346.346 0 0 0 .283-.141zm-8.057-11.792 1.665 5.278H22.751l1.665-5.278zm-9.156 4.478-1.412-4.478H23.7zM18.77 171.69h7.022l1.665 5.278H17.106zm-5.645 5.967h7.022l1.665 5.278H11.46zM5.815 188.9l1.665-5.278h7.02l1.665 5.278zm9.409-5.278h2.825l-1.413 4.478zm1.882 5.278 1.665-5.278h7.022l1.665 5.278zm9.409-5.278h2.825l-1.413 4.478zM28.4 188.9l1.665-5.278h7.022l1.665 5.278z" transform="translate(-4.282 -162.602)" style="fill:#333a60;stroke:#333a60;stroke-width:.3px"/>
+    </g>
+</svg>

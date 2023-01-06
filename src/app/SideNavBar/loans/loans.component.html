@@ -1,178 +1,135 @@
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/loans_web/PL_Banner4@2x.png?w=1920&q=77"
-          class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-  
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/loans_web/PL_Banner3@2x.png?w=1920&q=77"
-          class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-  
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://akam.cdn.jdmagicbox.com/images/icontent/loans_web/HL_Banner3@2x.png?w=1920&q=77"
-          class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-  
-        </div>
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="\assets\loan1.jpg"
+        class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div><br><br>
-  <!-- <h1 class="head">Why apply on Just-Search</h1> -->
-  <div class="container">
-  
-    <div class="row">
-      <div class="col" *ngFor="let card of images" routerLink="/ComingSoon">
-        <div class="row g-0">
-          <img [src]="card.img" class="loop">
-          <div class="card-body">
-            <h3 class="card-title" routerLink="/ComingSoon"><b>{{card.title}}</b></h3>
-          </div>
+    <div class="carousel-item">
+      <img src="\assets\loan7.png"
+        class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="\assets\loanslider3.jpg"
+        class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div><br><br>
+<!-- <h1 class="head">Why apply on Just-Search</h1> -->
+<div class="container">
+
+  <div class="row">
+    <div class="col" *ngFor="let card of images" routerLink="/ComingSoon">
+      <div class="row g-0">
+        <img [src]="card.img" class="loop">
+        <div class="card-body">
+          <h3 class="card-title" routerLink="/ComingSoon"><b>{{card.title}}</b></h3>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <h1 align="center" ><b><u>Why apply on Just-Search</u></b></h1>
+      <div class="col" *ngFor="let Cardloop of LoanCardloops">
+        <mat-card class="card1">
+          <mat-card-content>
+            <img [src]="Cardloop.img" class="loop2"><span><br><br>  </span>
+            <h3 class="card-title"><b>{{Cardloop.title}} <h3 class="card-title"><b>{{Cardloop.title2}}</b></h3></b></h3>
+            <h3 class="card-title">{{Cardloop.title1}}</h3>
+            <img [src]="Cardloop.img1" class="loop1">
+          </mat-card-content>
+
+        </mat-card>
+
+      </div>
+
+    </div>
+
+    
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <h1 align="center">Get a Loan in 5 simple steps on Just-Search</h1><br>
+     
+      <!-- <img align="center" src="\assets\loan process2.png"> -->
+    </div>
+  </div>
   <section>
     <div class="container">
+
+
       <div class="row">
-        <h1 align="center" ><b><u>Why apply on Just-Search</u></b></h1>
-        <div class="col" *ngFor="let Cardloop of LoanCardloops">
-          <mat-card class="card1">
+        <div class="col-12" *ngFor="let lo of cp">
+          <br>
+          <mat-card class="hp">
             <mat-card-content>
-              <img [src]="Cardloop.img" class="loop2"><span><br><br>  </span>
-              <h3 class="card-title"><b>{{Cardloop.title}} <h3 class="card-title"><b>{{Cardloop.title2}}</b></h3></b></h3>
-              <h3 class="card-title">{{Cardloop.title1}}</h3>
-              <img [src]="Cardloop.img1" class="loop1">
+              <h3 class="card-title" ><b>{{lo.title}}</b></h3>
             </mat-card-content>
-  
+            <mat-card-content>
+              <h3 class="card-title">{{lo.Des}}</h3>
+            </mat-card-content>
           </mat-card>
-  
-        </div>
-  
-      </div>
-  
-      
-    </div>
-    <hr>
-    <div class="container">
-      <div class="row">
-        <h1 align="center">Get a Loan in 5 simple steps on Just-Search</h1><br>
-        <img align="center" src="\assets\loan process 3.png">
-        <!-- <img align="center" src="\assets\loan process2.png"> -->
-      </div>
-    </div>
-    <section>
-      <div class="container">
-  
-  
-        <div class="row">
-          <div class="col-12" *ngFor="let lo of cp">
-            <br>
-            <mat-card class="hp">
-              <mat-card-content>
-                <h3 class="card-title" ><b>{{lo.title}}</b></h3>
-              </mat-card-content>
-              <mat-card-content>
-                <h3 class="card-title">{{lo.Des}}</h3>
-              </mat-card-content>
-            </mat-card>
-            
-          </div>
+          
         </div>
       </div>
-  
-    </section><br><br><hr>
-    <div class="container">
-        <div class="padd">
-        <h2>Apply For Instant Loans Online - Justdial</h2>
-        A hassle-free and convenient way to get loans, online loans allow people to complete the loan application process,
-        starting from prequalification to loan funding, without any need to step into a bank. Online loans typically
-        have
-        lesser stringent requirements and lower rates of interest in comparison to the offers made by conventional
-        lenders.
-        People can now avail of loans online anytime from banks, NBFCs, and peer-to-peer lending platforms in a matter
-        of
-        minutes as the approval time of online loans can be as low as 1 minute. The most obvious difference between an
-        online loan and a traditional loan is that the applicant does not have to interact with a customer service
-        representative or banker in person.<br><br>
-      
-        <h1><u>Types of loans</u></h1>
-        <h2>Car loan</h2>
-        A car loan is very much essential today for commuting conveniently. It is easy to apply for a car loan online. The
-        interest rates will vary from one bank to another and hence it is important to compare the interest rates before
-        application.<br><br>
-        <h2>Personal loan</h2>
-        Education loans, wedding loans, medical loans, loans for home renovation, travel loans, shopping loans, etc. are all
-        personal loans. To get such a loan, the applicant has to submit only a few documents like proof of assets, proof
-        of
-        income to prove that he/she has enough assets to repay the loan. Personal loans can be very helpful for
-        replaying
-        small loan amounts.<br><br>
-      
-        <h2>Home loan</h2>
-        Home loans prove extremely beneficial to finance the purchase of home properties. The interest rate starts from
-        approximately 6.40% p.a. for tenures up to 30 years depending on the credit score of the applicant, monthly
-        income,
-        amount of loan, and other factors.<br><br>
-      
-        <h2>Two-wheeler loan</h2>
-        A two wheeler loan can help people buy their dream two-wheeler vehicle. The ratio of debt to income, credit score,
-        loan tenure, etc. are some factors that will play a crucial role in determi9ning the loan amount.<br>
-      
-        <h2>Business loan</h2>
-        A business loan can be borrowed for meeting both planned and unplanned business expenses. This unsecured financing
-        is available to partnership firms, private limited companies, self-employed non-professionals, and self-employed
-        professionals.<br><br>
-      
-        <h2>Credit cards</h2>
-        Credit cards prove handy for people planning to make high-ticket purchases. Having a credit card can make shopping
-        an extremely rewarding experience. Justdial is the right place to find a credit card that perfectly suits
-        different
-        needs and helps users to make the most of their purchases.<br><br>
-      
-        <h1><u>Steps in getting loans online</u></h1>
-        While the steps will vary from one online lender to another, almost all of them follow a standard procedure. Here
-        are the various steps involved in getting a loan online:<br><br>
-      
-        People willing to take a loan have to visit the lender's website<br><br>
-      
-        They have to choose a type of loan they want to apply for<br><br>
-      
-        Click on the apply option<br><br>
-      
-        The bank will check the eligibility of the applicant and request the applicant to submit the required KYC documents
-        and income documents<br><br>
-      
-        The bank will disburse the loan amount to the bank account of the applicant if they find the applicant to be
-        eligible<br><br>
-      
-        <h1>How Justdial can help in getting loans online?</h1>
-        For any type of financial emergency, the best that you can do is get a loan. Justdial makes this task easier for you
-        by helping you to apply for different types of loans such as car loans, personal loans, home loans, two-wheeler
-        loans, business loans, education loans, shopping loans, etc. You can easily compare the interest rates of
-        different
-        banks, check out the eligibility criteria, the application process, and all other related information here. In
-        case
-        of any queries, you can always reach out to a customer care representative of Justdial at 55555555555.<br><br>
-      </div>
-      </div>
+    </div>
+
+  </section><br><br><hr>
+  <div class="container">
+      <div class="padd">
+      <h2>Apply For Instant Loans Online - Justdial</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae alias aliquam voluptates repellat sapiente distinctio ducimus at provident maxime porro totam unde fugit, dolorum quia excepturi et, cum sunt vitae.
+    
+      <h1><u>Types of loans</u></h1>
+      <h2>Car loan</h2>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab porro doloremque accusamus! Sit ipsam architecto nisi at assumenda labore facilis. Veniam, est exercitationem commodi dolores fuga hic quam sint consectetur.
+      <h2>Personal loan</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, voluptatem? Harum, labore excepturi? Hic fuga tempora recusandae omnis quasi ducimus rerum ex temporibus, debitis, nobis, veritatis quod numquam cupiditate! Laboriosam.
+    
+      <h2>Home loan</h2>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia quae accusantium esse voluptate aperiam explicabo. Quasi culpa soluta, ad et animi incidunt tempora qui natus, aut error tempore, veritatis deserunt.
+      <h2>Two-wheeler loan</h2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolores necessitatibus perspiciatis possimus, repellendus in rerum. Dicta laborum accusamus expedita quod amet, deserunt, nulla corrupti et vero possimus reprehenderit placeat.
+    
+      <h2>Business loan</h2>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, maxime voluptatem aliquid vel velit porro unde temporibus! Veritatis explicabo, laudantium ullam consectetur libero iste error nam dolorum ducimus ratione quasi!
+    
+      <h2>Credit cards</h2>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum ipsa repudiandae vitae quisquam ducimus cum facilis optio tempora ratione pariatur, odit accusantium, voluptatem ullam molestiae, eius obcaecati nam fugiat. Aspernatur.
+    
+      <h1><u>Steps in getting loans online</u></h1>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maxime numquam possimus delectus accusantium asperiores deserunt libero necessitatibus ipsa ipsum accusamus inventore aperiam ex eum enim consectetur, alias fugiat facere?
+    
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio suscipit vero omnis labore voluptatibus ex fuga facere minus. Tempore minima culpa blanditiis earum ducimus dolorum? Voluptas nihil culpa labore enim.
+    
+      <h1>How Just-Search can help in getting loans online?</h1>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, quo iste! Magni omnis, deserunt consequatur quae expedita excepturi? Vitae iusto maxime delectus ducimus recusandae neque asperiores doloribus soluta unde rem.
+    </div>
+    </div>

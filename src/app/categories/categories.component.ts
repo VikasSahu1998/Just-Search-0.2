@@ -24,14 +24,14 @@ export class CategoriesComponent {
       description2: 'Book Table ',
       description3: ' Trending,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/restaurant.jpg'
+      img: '/assets/resturant.jpg'
     },
     {
       title: 'DOCTORS',
       description1: 'Dentists',
       description2: 'Dermatologists ',
       description3: ' ENT,More...',
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/Doctors.jpg'
+      img: '/assets/doctor.jpg'
     },
     {
       title: 'REAL ESTATE',
@@ -39,7 +39,7 @@ export class CategoriesComponent {
       description2: 'Rent',
       description3: 'Sell,PG/Coliving',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/real_estate1.jpg'
+      img: '/assets/rs.avif'
     },
     {
       title: 'SHOP ONLINE',
@@ -47,7 +47,7 @@ export class CategoriesComponent {
       description2: 'Electronics',
       description3: ' Beauty,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/hm-shopfront.jpg'
+      img: '/assets/online-shop-catagory.avif'
     },
     {
       title: 'TRAVEL',
@@ -55,14 +55,14 @@ export class CategoriesComponent {
       description2: 'Bus ',
       description3: 'Train,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/travel.jpg'
+      img: '/assets/travel.avif'
     },
     {
       title: 'REPAIR',
       description1: 'AC,TV',
       description2: 'Washing Machine',
       description3: 'Refrigerator,More...',
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/repairs.jpg'
+      img: '/assets/repair.avif'
     },
     {
       title: 'LOANS',
@@ -70,7 +70,7 @@ export class CategoriesComponent {
       description2: 'Home Loans',
       description3: 'Personal Loans,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/loans.jpg'
+      img: '/assets/loans-catgory.avif'
     },
     {
       title: 'AUTO MOBILES',
@@ -78,7 +78,7 @@ export class CategoriesComponent {
       description2: 'Used Car',
       description3: 'Car Insurance,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/automobile.jpg'
+      img: '/assets/automobile-catagory.avif'
     },
     {
       title: 'ON DEMAND SERVICE',
@@ -86,14 +86,14 @@ export class CategoriesComponent {
       description2: 'Pest control ',
       description3: 'More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/ondemand.jpg'
+      img: '/assets/on-d-s.webp'
     },
     {
       title: 'WEDDING',
       description1: 'Banquet Hall',
       description2: 'Bridal Requisites',
       description3: 'Caterers,More...',
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/wedding.jpg'
+      img: '/assets/wedding.avif'
     },
     {
       title: 'JOBS',
@@ -101,7 +101,7 @@ export class CategoriesComponent {
       description2: 'Search Jobs',
       description3: 'Overseas Jobs,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/jobs-compressor.jpg'
+      img: '/assets/jobs.jpg'
     },
     {
       title: 'PERSONAL CARE',
@@ -109,7 +109,7 @@ export class CategoriesComponent {
       description2: 'Spas',
       description3: 'Salons,More...',
 
-      img: 'https://akam.cdn.jdmagicbox.com/images/icontent/jdrwd_new/personal_care.jpg'
+      img: '/assets/personal-care.avif'
     },
     {
       title: 'DAILY NEEDS',

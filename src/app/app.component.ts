@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
   btnVal = "LogIn";
   constructor(private router: Router, public dialog: MatDialog, private api: ApiService,) { }
   ngOnInit() {
-    this.getdata();
+    // this.getdata();
    
     
   }
@@ -37,10 +37,10 @@ export class AppComponent implements OnInit {
   }
 
   
-  getdata() {
-    this.api.getLogin().subscribe((res: any) => {
-      // console.log(res);
-        this.user = res['0'].name;
-    });
-  }
+  // getdata() {
+  //   this.api.getLogin().subscribe((res: any) => {
+  //     // console.log(res);
+  //       this.user = res['0'].name;
+  //   });
+  // }
 }
