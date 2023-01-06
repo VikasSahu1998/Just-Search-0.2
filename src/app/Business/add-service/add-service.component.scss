@@ -1,0 +1,47 @@
+.example-card {
+    max-width: 50%;
+    display: flex;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 10%;
+}
+
+.butt1 {
+    display: flex;
+    margin: auto;
+}
+
+.example-full-width {
+    width: 100%;
+    align-items: center;
+}
+
+
+.img-fluid {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    transition: 1s ease;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+
+.card-text:hover {
+    cursor: pointer;
+}
+
+.example-form-fields {
+    display: flex;
+    align-items: flex-start;
+}
+
+.example-container mat-form-field+mat-form-field {
+    margin-left: 10px;
+}

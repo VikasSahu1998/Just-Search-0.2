@@ -10,7 +10,7 @@ export class ApiService {
   opts = [];
   constructor(private http: HttpClient) { }
   postSingup(data: any) {
-    return this.http.post<any>("http://localhost:3000/signup/", data);
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/signup.json/", data);
   }
 
   postCategories(data: any) {
@@ -25,7 +25,7 @@ export class ApiService {
     return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/train.json/", data);
   }
   getLogin() {
-    return this.http.get<any>("http://localhost:3000/signup/");
+    return this.http.get<any>("https://my-project-507f0-default-rtdb.firebaseio.com/signup.json/");
   }
 
   getCountries() {

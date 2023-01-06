@@ -1,0 +1,64 @@
+<section>
+    <div class="container">
+        <mat-card class="example-card container">
+            <span><br></span>
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>Add your Service</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="addServiceForm" novalidate (ngSubmit)="oncategoriesubmit()" class="d-flex-center">
+                    <!-- input type Name -->
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Service Name</mat-label>
+                        <input matInput placeholder="Enter Product/Service Name" formControlName="product">
+                        <mat-icon matSuffix>perm_identity</mat-icon>
+
+                        <mat-error
+                            *ngIf="addServiceForm.get('product')?.invalid && (addServiceForm.get('product')?.dirty || addServiceForm.get('product')?.touched) && addServiceForm.get('product')?.errors?.required">
+                            product is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <div class="example-form-fields">
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput placeholder="Enter your name" formControlName="name">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                            <mat-error
+                                *ngIf="addServiceForm.get('name')?.invalid && (addServiceForm.get('name')?.dirty || addServiceForm.get('name')?.touched) && addServiceForm.get('name')?.errors?.required">
+                                Name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <!-- input type email -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>E-Mail</mat-label>
+                            <input matInput placeholder="E-Mail" formControlName="email">
+                            <mat-icon matSuffix>alternate_email</mat-icon>
+
+                            <mat-error
+                                *ngIf="!addServiceForm.get('email')?.errors?.required && (addServiceForm.get('email')?.errors?.pattern)">
+                                Please enter a valid <strong>email address</strong>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="addServiceForm.get('email')?.invalid && (addServiceForm.get('email')?.dirty || addServiceForm.get('email')?.touched) && addServiceForm.get('email')?.errors?.required">
+                                Email is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <mat-divider></mat-divider>
+                    <!-- button Submit -->
+                    <mat-card-actions>
+                        <button class="butt1" mat-raised-button color="primary" mat-button>Submit Requirement</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>
