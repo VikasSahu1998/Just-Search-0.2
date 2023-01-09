@@ -20,7 +20,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'Business/Home', component: BusinessHomeComponent },
   { path: 'ComingSoon', component: ComingSoonComponent },
   { path: 'Loans', component: LoansComponent },
@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'Book', component: BookComponent },
   { path: 'test', component: AddServiceComponent },
   { path: 'BabyCare', component: BabyCareComponent },
-  { path: '', redirectTo: 'Home', pathMatch: 'full' }, 
+  { path: '', redirectTo: '', pathMatch: 'full' }, 
 ];
 
 @NgModule({

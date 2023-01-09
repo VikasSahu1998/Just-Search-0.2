@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     
   }
   Onhome(): void {
-    this.router.navigate(['Home']);
+    this.router.navigate(['/']);
   }
 
   Onsignin() {
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     this.router.navigate(['Categories']);
   }
 
-  
+
   // getdata() {
   //   this.api.getLogin().subscribe((res: any) => {
   //     // console.log(res);
