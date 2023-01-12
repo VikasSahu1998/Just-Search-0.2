@@ -16,27 +16,6 @@
     align-items: center;
 }
 
-
-.img-fluid {
-    width: 100%;
-    height: 100%;
-}
-
-.card {
-    transition: 1s ease;
-}
-
-.card:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 1s ease;
-}
-
-.card-text:hover {
-    cursor: pointer;
-}
-
 .example-form-fields {
     display: flex;
     align-items: flex-start;

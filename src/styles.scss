@@ -4,33 +4,30 @@
 
 @include mat.core();
 
-$angular-primary: mat.define-palette(mat.$purple-palette, 200);
-$angular-accent: mat.define-palette(mat.$teal-palette, 200);
-$angular-warn: mat.define-palette(mat.$red-palette);
-
-// define a dark theme
-$angular-dark-theme: mat.define-dark-theme(
-  (
-    color: (
-      primary: $angular-primary,
-      accent: $angular-accent,
-      warn: $angular-warn,
-    ),
-  )
-);
-
-.darkMode {
-  @include mat.all-component-colors($angular-dark-theme);
-}
 
 /* You can add global styles to this file, and also import other style files */
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+$angular-primary: mat.define-palette(mat.$purple-palette, 200);
+$angular-accent: mat.define-palette(mat.$teal-palette, 200);
+$angular-warn: mat.define-palette(mat.$red-palette);
+
+// define a dark theme
+$angular-dark-theme: mat.define-dark-theme((color: (primary: $angular-primary,
+        accent: $angular-accent,
+        warn: $angular-warn,
+      ),
+    ));
+
+.darkMode {
+  @include mat.all-component-colors($angular-dark-theme);
 }

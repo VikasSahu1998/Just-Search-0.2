@@ -35,7 +35,7 @@ export class SignUpComponent {
 
   ngOnInit(): void {
     this.singupForm = new FormGroup({
-      name: new FormControl('', [Validators.required,]),
+      name: new FormControl('', [Validators.required,Validators.pattern('^[a-zA-Z ]*$')]),
       email: new FormControl('', [Validators.required, Validators.email]),
       PhoneNumber: new FormControl('', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]),
       password: new FormControl('', [Validators.required]),
