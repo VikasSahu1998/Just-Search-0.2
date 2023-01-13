@@ -12,13 +12,56 @@
                 <form [formGroup]="addServiceForm" novalidate (ngSubmit)="oncategoriesubmit()" class="d-flex-center">
                     <!-- input type Name -->
                     <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Service Name</mat-label>
+                        <mat-label>Product Name</mat-label>
                         <input matInput placeholder="Enter Product/Service Name" formControlName="product">
                         <mat-icon matSuffix>perm_identity</mat-icon>
 
                         <mat-error
                             *ngIf="addServiceForm.get('product')?.invalid && (addServiceForm.get('product')?.dirty || addServiceForm.get('product')?.touched) && addServiceForm.get('product')?.errors?.required">
                             product is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Url</mat-label>
+                        <input matInput placeholder="Enter Product url" formControlName="Url">
+                        <mat-icon matSuffix>perm_identity</mat-icon>
+
+                        <mat-error
+                            *ngIf="addServiceForm.get('Url')?.invalid && (addServiceForm.get('Url')?.dirty || addServiceForm.get('Url')?.touched) && addServiceForm.get('Url')?.errors?.required">
+                            Product Url is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Details</mat-label>
+                        <textarea matInput placeholder="Enter Product Details" formControlName="Details"></textarea>
+                        <mat-icon matSuffix>perm_identity</mat-icon>
+
+                        <mat-error
+                            *ngIf="addServiceForm.get('Details')?.invalid && (addServiceForm.get('Details')?.dirty || addServiceForm.get('Details')?.touched) && addServiceForm.get('Details')?.errors?.required">
+                            Product Details is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Price</mat-label>
+                        <input matInput placeholder="Enter Product Price" formControlName="Price">
+                        <mat-icon matSuffix>perm_identity</mat-icon>
+
+                        <mat-error
+                            *ngIf="addServiceForm.get('Price')?.invalid && (addServiceForm.get('Price')?.dirty || addServiceForm.get('Price')?.touched) && addServiceForm.get('Price')?.errors?.required">
+                            Amount is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Product Brand</mat-label>
+                        <input matInput placeholder="Enter Product Brand" formControlName="Pbrand">
+                        <mat-icon matSuffix>perm_identity</mat-icon>
+
+                        <mat-error
+                            *ngIf="addServiceForm.get('Pbrand')?.invalid && (addServiceForm.get('Pbrand')?.dirty || addServiceForm.get('Pbrand')?.touched) && addServiceForm.get('Pbrand')?.errors?.required">
+                           Brand is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
 
@@ -56,7 +99,7 @@
                     <!-- input type Name -->
                     <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label>number</mat-label>
-                        <input matInput placeholder="Enter Product/Service Name" formControlName="number">
+                        <input matInput placeholder="Enter Your number" formControlName="number">
                         <mat-icon matSuffix>perm_identity</mat-icon>
 
                         <mat-error
@@ -68,7 +111,7 @@
                     <!-- input type Name -->
                     <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label>address Name</mat-label>
-                        <textarea matInput placeholder="Enter Product/Service Name"
+                        <textarea matInput placeholder="Enter your Address"
                             formControlName="address"></textarea>
                         <mat-icon matSuffix>perm_identity</mat-icon>
 
@@ -90,10 +133,98 @@
     </div>
 </section>
 
-<div class="row">
-    <div class="col-md-4" *ngFor="let Service of serviceData">
-        <div class="card card-body">
-            <h2>{{Service. Service_name}}</h2>
+<!-- <div class="container text-center">
+    <div class="col-md-12" *ngFor="let Service of serviceData">
+        <mat-card class="card">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="{{Service.Service_img}}" alt="">
+                </div>
+
+                <div class="col-lg-8">
+
+                  <div class="card" > -->
+<!-- <h2> {{Service. Service_name}} </h2> -->
+<!-- <h2>{{Service. Service_email}}</h2> -->
+<!-- <h2>{{Service. Service_product}}</h2>
+                        <p> {{Service. Service_Details}}</p>
+                     <h2>{{Service. Service_number}}</h2> -->
+<!-- <p>{{Service. Service_address}}</p>
+                        Rs. {{Service. Service_Price}} -->
+<!-- <button mat-raised-button color="primary">Primary</button><br> -->
+<!-- </div> -->
+
+<!-- </div>
+
+            </div>
+        </mat-card>
+    </div> -->
+<!-- </div> -->
+<!-- <div class="container">
+    <div class=" cardss row" *ngFor="let Service of serviceData">
+        <div class="loopimg col-lg-6">
+            <div class="cardimage">
+                <img class="imuu" src="{{Service.Service_img}}" alt="">
+            </div>
+        </div>
+        <div class=" detail col-lg-6">
+            <div class="h1div">
+                <h2>{{Service. Service_product}}</h2>
+            </div>
+            <div>
+                <p>{{Service. Service_Details}}</p>
+            </div>
+
+            <h3>{{Service. Service_name}}</h3>
+            <div class="info">
+                <h1> -->
+                    <!-- M.r.p-:<del>20000</del><br> -->
+                  <!-- Price-:{{Service. Service_Price}}
+                </h1> -->
+                <!-- <h1>
+                    ooo yesh shushil ......
+                </h1> -->
+            <!-- </div> -->
+          
+            <!-- <h3>{{Service. Service_number}}</h3>
+            <h3>{{Service. Service_email}}</h3> -->
+        
+<!--             
         </div>
     </div>
-</div>
+</div> -->
+
+<section>
+    <div class="container">
+        <h1>Popular Services</h1>
+        <div class="row">
+            <div class="col-sm-6 height-50" *ngFor="let Service of serviceData" routerLink="/ComingSoon">
+                <mat-card class="card mb-3" style="max-width: 400px; ">
+
+                    <div class="row g-0">
+
+                        <div class="col-md-6">
+
+                            <img [src]="Service.Service_img" class="img-fluid rounded-start" alt="card" width="100%" height="100%" >
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title" routerLink="/ComingSoon"><b> <h2>{{Service. Service_product}}</h2></b></h3>
+                                <p class="card-text " routerLink="/ComingSoon"  > {{Service. Service_Details}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_Pbrand}}</p>
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_name}}</p> -->
+                                <p class="card-text" >Offer Limited</p>
+                                <p class="card-text" routerLink="/ComingSoon"> Price-:{{Service. Service_Price}}</p>
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_number}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_email}}</p> -->
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_name}}</p> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </mat-card>
+            </div>
+        </div>
+        <span><br><br><br></span>
+    </div>
+</section>
