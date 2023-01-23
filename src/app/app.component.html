@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  " >
+<nav class="navbar navbar-expand-lg  ">
 
     <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon></button>
@@ -128,13 +128,10 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content (click)="drawer.close()">
-        <div style="min-height: 100vh;">
+        <div style="height: 90vh;"> 
             <router-outlet></router-outlet>
         </div>
-       
-        <div>
-            <app-footer></app-footer>
-        </div>
-    
     </mat-sidenav-content>
 </mat-sidenav-container>
+<app-tawk></app-tawk>
+<app-footer></app-footer>

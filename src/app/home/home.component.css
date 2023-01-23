@@ -26,3 +26,67 @@
     width: 50px;
     height: 50px;
 }
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+    .size {
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
+    
+    .search {
+        width: 50%;
+        margin-right: auto;
+    }
+    
+    .Country {
+        width: 20%;
+        margin-left: auto;
+    }
+    
+    .example-card {
+        max-width: 400px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img1{
+     
+        width: 50px;
+        height: 50px;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, the background color is olive */
+  @media screen and (max-width: 600px) {
+    .size {
+        width: 40%;
+        display: flex;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
+    
+    .search {
+        width: 50%;
+        margin-right: auto;
+    }
+    
+    .Country {
+        width: 20%;
+        margin-left: auto;
+    }
+    
+    .example-card {
+        max-width: 400px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img1{
+     
+        width: 50px;
+        height: 50px;
+    }
+  }

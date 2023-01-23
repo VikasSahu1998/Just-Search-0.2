@@ -45,6 +45,7 @@ import { BabyCareComponent } from './SideNavBar/baby-care/baby-care.component';
 import { BusinessLoginComponent } from './Business/business-login/business-login.component';
 import { BusinessHomeComponent } from './Business/business-home/business-home.component';
 import { AddServiceComponent } from './Business/add-service/add-service.component';
+import { TawkComponent } from './shared/tawk/tawk.component';
 
 
 
@@ -68,6 +69,7 @@ import { AddServiceComponent } from './Business/add-service/add-service.componen
     BusinessLoginComponent,
     BusinessHomeComponent,
     AddServiceComponent,
+    TawkComponent,
   ],
   imports: [
     BrowserModule,

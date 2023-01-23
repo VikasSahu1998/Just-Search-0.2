@@ -13,7 +13,7 @@
     <div class="col-12 input-group">
       <mat-form-field matPrefix appearance="outline" class="Country ">
         <mat-icon matPrefix> location_on</mat-icon>
-        <input  placeholder="Country" matInput [formControl]="myControl"
+        <input  placeholder="Enter Location" matInput [formControl]="myControl"
           [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name.common">
