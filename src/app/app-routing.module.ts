@@ -10,9 +10,15 @@ import { AirTicketComponent } from './SideNavBar/air-ticket/air-ticket.component
 import { AutoCareComponent } from './SideNavBar/auto-care/auto-care.component';
 import { AutoMobileComponent } from './SideNavBar/auto-mobile/auto-mobile.component';
 import { BabyCareComponent } from './SideNavBar/baby-care/baby-care.component';
+import { BillsRechargeComponent } from './SideNavBar/bills-recharge/bills-recharge.component';
+import { PostpaidComponent } from './SideNavBar/bills-recharge/postpaid/postpaid.component';
+import { PrepaidComponent } from './SideNavBar/bills-recharge/prepaid/prepaid.component';
+import { BookHotelComponent } from './SideNavBar/book-hotel/book-hotel.component';
 import { BookComponent } from './SideNavBar/book/book.component';
+import { BusComponent } from './SideNavBar/bus/bus.component';
 import { LoansComponent } from './SideNavBar/loans/loans.component';
 import { OnDemandServicesFilComponent } from './SideNavBar/on-demand-services-fil/on-demand-services-fil.component';
+import { PestControlComponent } from './SideNavBar/pest-control/pest-control.component';
 import { ShoppingComponent } from './SideNavBar/shopping/shopping.component';
 import { TrainComponent } from './SideNavBar/train/train.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -36,6 +42,12 @@ const routes: Routes = [
   { path: 'Book', component: BookComponent },
   { path: 'test', component: AddServiceComponent },
   { path: 'BabyCare', component: BabyCareComponent },
+  { path: 'prepaid', component: PrepaidComponent },
+  { path: 'postpaid', component: PostpaidComponent },
+  { path: 'bill', component: BillsRechargeComponent },
+  { path: 'Book-hotel', component: BookHotelComponent },
+  { path: 'pest-control', component: PestControlComponent },
+  { path: 'bus', component: BusComponent },
   { path: '', redirectTo: '', pathMatch: 'full' }, 
 ];
 

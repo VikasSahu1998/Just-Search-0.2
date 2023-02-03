@@ -46,6 +46,12 @@ import { BusinessLoginComponent } from './Business/business-login/business-login
 import { BusinessHomeComponent } from './Business/business-home/business-home.component';
 import { AddServiceComponent } from './Business/add-service/add-service.component';
 import { TawkComponent } from './shared/tawk/tawk.component';
+import { BillsRechargeComponent } from './SideNavBar/bills-recharge/bills-recharge.component';
+import { PostpaidComponent } from './SideNavBar/bills-recharge/postpaid/postpaid.component';
+import { PrepaidComponent } from './SideNavBar/bills-recharge/prepaid/prepaid.component';
+import { BookHotelComponent } from './SideNavBar/book-hotel/book-hotel.component';
+import { PestControlComponent } from './SideNavBar/pest-control/pest-control.component';
+import { BusComponent } from './SideNavBar/bus/bus.component';
 
 
 
@@ -70,6 +76,12 @@ import { TawkComponent } from './shared/tawk/tawk.component';
     BusinessHomeComponent,
     AddServiceComponent,
     TawkComponent,
+    BillsRechargeComponent,
+    PostpaidComponent,
+    PrepaidComponent,
+    BookHotelComponent,
+    PestControlComponent,
+    BusComponent,
   ],
   imports: [
     BrowserModule,

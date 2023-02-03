@@ -32,7 +32,20 @@ export class ApiService {
   getLogin() {
     return this.http.get<any>("https://my-project-507f0-default-rtdb.firebaseio.com/signup.json/");
   }
-
+  Prepaid(data: any) {
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/Prepaid.json/", data);
+  }
+  Postpaid(data: any) {
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/Postpaid.json/", data);
+  }
+  BookHotel(data: any) {
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/BookHotel.json/", data);
+  }
+  BookBus(data: any) {
+    return this.http.post<any>("https://my-project-507f0-default-rtdb.firebaseio.com/BookBus.json/", data);
+  }
+    
+    
   getCountries() {
     return this.opts.length ?
       of(this.opts) :

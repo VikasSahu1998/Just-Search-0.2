@@ -1,0 +1,117 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/AirTicket">Flight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/Hotel_Book">Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/Bus">Bus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Cab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/Train">Train</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Visa Assistance</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Foreign Exchange</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">International Sim Card</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</section>
+
+<span><br></span>
+<span><br></span>
+<section>
+
+    <div class="container">
+        <span><br></span>
+        <mat-card class="example-card container">
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>BOOK BUS TICKETS</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="BusForm" novalidate (ngSubmit)="onBusSubmit()" class="d-flex-center">
+
+                    <div class="example-form-fields">
+
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>From</mat-label>
+                            <mat-select formControlName="fromcity" Single>
+                                <mat-option *ngFor="let topping of toppingList"
+                                    [value]="topping">{{topping.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                       
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>To</mat-label>
+                            <mat-select formControlName="ToCity" Single>
+                                <mat-option *ngFor="let classLists of classList"
+                                    [value]="classLists">{{classLists.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="example-form-fields">
+
+
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="datepicker" formControlName="checkIn">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #datepicker>
+                                <mat-datepicker-actions>
+                                    <button mat-button matDatepickerCancel>Cancel</button>
+                                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                                </mat-datepicker-actions>
+                            </mat-datepicker>
+                        </mat-form-field>
+
+
+                        <!-- input type Name -->
+                        <mat-form-field class="example-full-width" appearance="outline">
+
+                            <mat-label>Enter a date range</mat-label>
+                            <mat-date-range-input [rangePicker]="rangePicker">
+                                <input matStartDate placeholder="Start date" formControlName="checkOut">
+                                <input matEndDate placeholder="End date">
+                            </mat-date-range-input>
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="rangePicker"></mat-datepicker-toggle>
+                            <mat-date-range-picker #rangePicker>
+                                <mat-date-range-picker-actions>
+                                    <button mat-button matDateRangePickerCancel>Cancel</button>
+                                    <button mat-raised-button color="primary" matDateRangePickerApply>Apply</button>
+                                </mat-date-range-picker-actions>
+                            </mat-date-range-picker>
+                        </mat-form-field>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <!-- button Submit -->
+                    <mat-card-actions>
+                        <button class="butt1" mat-raised-button color="primary" mat-button>Search</button>
+                    </mat-card-actions>
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>

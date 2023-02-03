@@ -1,0 +1,90 @@
+
+
+<section>
+
+    <div class="container">
+        <span><br></span>
+        <mat-card class="example-card container ">
+            <mat-card-header class="row text-center">
+                <mat-card-title>
+                    <span>Recharge Your Mobile</span>
+                </mat-card-title>
+            </mat-card-header>
+            <span><br></span>
+            <div class="example-container">
+                <form [formGroup]="PrepaidForm" novalidate (ngSubmit)="onRechargeSubmit()" class="d-flex-center">
+
+                    <div class="example-form-fields">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Enter Your Mobile Number</mat-label>
+                            <input matInput placeholder="Enter Your Mobile Number" formControlName="Mobilenumber">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+
+                            <mat-error
+                                *ngIf="PrepaidForm.get('Mobilenumber')?.invalid && (PrepaidForm.get('Mobilenumber')?.dirty || PrepaidForm.get('Mobilenumber')?.touched) && PrepaidForm.get('Mobilenumber')?.errors?.required">
+                                Leaving From is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Select Service</mat-label>
+                        <mat-select formControlName="Service" Single>
+
+                            <mat-option *ngFor="let classLists of classList"
+                                [value]="classLists">{{classLists.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <div>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Select Your Circle</mat-label>
+                            <mat-select formControlName="class" Single>
+                                <mat-option *ngFor="let classSecondLists of classSecondList"
+                                    [value]="classSecondLists">{{classSecondLists.name}}</mat-option>
+                            </mat-select>
+                        </mat-form-field><br>
+                    </div>
+                    <div class="hhh mb-3">
+                        <div class="row">
+                            <div class="col-lg-6 " align="left">
+                                <button mat-button color="primary">Submit</button>
+                            </div>
+                            <div class="col-lg-6"  align="right">
+                                <button mat-button color="warn">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </mat-card>
+    </div>
+</section>
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Airtel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">BSNL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Jio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">MTNL Delhi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">MTNL Mumbai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/ComingSoon">Vodafone Idea</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>

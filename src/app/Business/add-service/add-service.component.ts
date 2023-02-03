@@ -25,7 +25,7 @@ export class AddServiceComponent {
     Service_Details: '',
     Service_Price: '',
     Service_img: '',
-   
+
     Service_Pbrand: '',
   }
 
