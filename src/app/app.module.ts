@@ -52,6 +52,7 @@ import { PrepaidComponent } from './SideNavBar/bills-recharge/prepaid/prepaid.co
 import { BookHotelComponent } from './SideNavBar/book-hotel/book-hotel.component';
 import { PestControlComponent } from './SideNavBar/pest-control/pest-control.component';
 import { BusComponent } from './SideNavBar/bus/bus.component';
+import { TestComponent } from './test/test.component';
 
 
 
@@ -82,6 +83,7 @@ import { BusComponent } from './SideNavBar/bus/bus.component';
     BookHotelComponent,
     PestControlComponent,
     BusComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

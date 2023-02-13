@@ -23,10 +23,12 @@ import { ShoppingComponent } from './SideNavBar/shopping/shopping.component';
 import { TrainComponent } from './SideNavBar/train/train.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { TestComponent } from './test/test.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  {path:'root', component:TestComponent},
   { path: 'Business/Home', component: BusinessHomeComponent },
   { path: 'ComingSoon', component: ComingSoonComponent },
   { path: 'Loans', component: LoansComponent },

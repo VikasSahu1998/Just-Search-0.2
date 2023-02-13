@@ -1,0 +1,15 @@
+<mat-form-field class="search" appearance="outline" fullscreen="true">
+    <input type="search" matInput [formControl]="searchField" debounce="1000" placeholder="Just-Search">
+    <mat-icon matSuffix>zoom_in</mat-icon>
+    <!-- <mat-icon matSuffix>mic_none</mat-icon> -->
+</mat-form-field>
+
+<div class="container">
+    <div class="row">
+        <div class="col" *ngFor="let foodItem of Services$ | async">
+            <mat-card>
+                <h1>{{ foodItem.Service_name }}</h1>
+            </mat-card>
+        </div>
+    </div>
+</div>
