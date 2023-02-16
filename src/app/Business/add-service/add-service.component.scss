@@ -17,6 +17,7 @@
 .butt1 {
     display: flex;
     margin: auto;
+    width: 100%;
 }
 
 .example-full-width {
@@ -30,4 +31,11 @@
 }
 .space{
     padding: 5px;
+}
+
+img{
+   
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
