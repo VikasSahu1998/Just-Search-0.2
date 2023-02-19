@@ -24,7 +24,16 @@ export class TestComponent implements OnInit {
     this.searchField = new FormControl('');
   }
 
-  async ngOnInit() {
+   ngOnInit() {
+   
+
+  
+  }
+
+
+  async getSearch(searchField: any)
+  {
+
     const searchTerm$ = this.searchField.valueChanges.pipe(
       startWith(this.searchField.value)
     );
@@ -33,15 +42,15 @@ export class TestComponent implements OnInit {
       query(collection(this.firestore, 'Services'))
     ) as Observable<addService[]>;
 
+
     this.Services$ = combineLatest([Services$, searchTerm$]).pipe(
       map(([Services, searchTerm]) =>
         Services.filter(
           (addService) =>
             searchTerm === '' ||
-            addService.Service_name.toLowerCase().includes(searchTerm.toLowerCase())
+            addService.Service_product.toLowerCase().includes(searchTerm.toLowerCase())
         )
       )
-    );
+    )
   }
 }
-

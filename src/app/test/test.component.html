@@ -1,10 +1,10 @@
 <mat-form-field class="search" appearance="outline" fullscreen="true">
-    <input type="search" matInput [formControl]="searchField" debounce="1000" placeholder="Just-Search">
+    <input type="search" matInput [formControl]="searchField" debounce="1000" placeholder="Just-Search" (keyup)="getSearch($event)" >
     <mat-icon matSuffix>zoom_in</mat-icon>
     <!-- <mat-icon matSuffix>mic_none</mat-icon> -->
 </mat-form-field>
 
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col" *ngFor="let foodItem of Services$ | async">
             <mat-card>
@@ -12,4 +12,42 @@
             </mat-card>
         </div>
     </div>
-</div>
+</div> -->
+
+
+<section>
+    <div class="container">
+    
+        <div class="row text-center mt-4" *ngFor="let Service of Services$ | async">
+            <div class="col-sm-6 height-50"  routerLink="/ComingSoon">
+                <mat-card class="card mb-3" style="max-width: 600px; ">
+
+                    <div class="row g-0">
+
+                        <div class="col-md-6 text-center mt-4">
+
+                            <img [src]="Service.Service_img"  alt="card" >
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h3 class="card-title" routerLink="/ComingSoon"><b> <h2>{{Service. Service_product}}</h2></b></h3>
+                                <p class="card-text " routerLink="/ComingSoon"  > {{Service. Service_Details}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_Pbrand}}</p>
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_name}}</p> -->
+                                <p class="card-text" >Offer Limited</p>
+                                <p class="card-text" routerLink="/ComingSoon"> Price-:{{Service. Service_Price}}</p>
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_number}}</p>
+                                <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_email}}</p> -->
+                                <!-- <p class="card-text" routerLink="/ComingSoon"> {{Service. Service_name}}</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <mat-card-actions >
+                        <button mat-stroked-button color="primary" class="butt1">Check-Out</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+        <span><br><br><br></span>
+    </div>
+</section>

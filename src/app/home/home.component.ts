@@ -7,6 +7,18 @@ import { Router } from '@angular/router';
 import { ApiService } from "../shared/api.service";
 import { FormControl } from "@angular/forms";
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
+import { addService } from "../shared/addservice";
+import { Firestore } from "@angular/fire/firestore";
+
+import {
+  collectionData,
+  collection,
+  query,
+} from '@angular/fire/firestore';
+import { combineLatest} from 'rxjs';
+
+
+
 const APIKEY = "e8067b53";
 
 const PARAMS = new HttpParams({
@@ -35,12 +47,16 @@ export class HomeComponent implements OnInit {
   apiResponse: any;
   isSearching!: boolean;
 
+  public searchField!: FormControl;
+
+  public Services$!: Observable<addService[]>;
+
 
   myControl = new FormControl();
   options = [];
   filteredOptions!: Observable<any[]>;
 
-  constructor(private router: Router, private api: ApiService, private httpClient: HttpClient) { this.isSearching = false; this.apiResponse = []; console.log(this.movieSearchInput);
+  constructor(private router: Router, private api: ApiService, private httpClient: HttpClient,private readonly firestore: Firestore) { this.isSearching = false; this.apiResponse = []; console.log(this.movieSearchInput);
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
       debounceTime(400),
@@ -49,6 +65,7 @@ export class HomeComponent implements OnInit {
             return this.filter(val || '')
        }) 
     )
+    this.searchField = new FormControl('');
   }
 
 
@@ -145,6 +162,30 @@ export class HomeComponent implements OnInit {
     return this.httpClient.get('http://www.omdbapi.com/?s=' + term + '&apikey=' + APIKEY, { params: PARAMS.set('search', term) });
   }
 
+
+  
+  async getSearch(searchField: any)
+  {
+
+    const searchTerm$ = this.searchField.valueChanges.pipe(
+      startWith(this.searchField.value)
+    );
+
+    const Services$ = collectionData(
+      query(collection(this.firestore, 'Services'))
+    ) as Observable<addService[]>;
+
+
+    this.Services$ = combineLatest([Services$, searchTerm$]).pipe(
+      map(([Services, searchTerm]) =>
+        Services.filter(
+          (addService) =>
+            searchTerm === '' ||
+            addService.Service_product.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+      )
+    )
+  }
 }
 
 
