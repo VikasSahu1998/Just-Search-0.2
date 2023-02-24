@@ -176,6 +176,7 @@ export class HomeComponent implements OnInit {
     ) as Observable<addService[]>;
 
 
+    
     this.Services$ = combineLatest([Services$, searchTerm$]).pipe(
       map(([Services, searchTerm]) =>
         Services.filter(

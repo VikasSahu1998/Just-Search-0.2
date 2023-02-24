@@ -24,7 +24,9 @@
 
       <mat-form-field class="search" appearance="outline">
         <!-- <input matInput #movieSearchInput placeholder="Just-Search"> -->
-        <input type="search" matInput [formControl]="searchField" debounce="1000" placeholder="Just-Search" (keyup)="getSearch($event)" >
+        <input type="search" matInput [formControl]="searchField" debounce="1000" placeholder="Just-Search" (input)="getSearch($event)"
+        
+        >
         <mat-icon matSuffix>zoom_in</mat-icon>
         <!-- <mat-icon matSuffix>mic_none</mat-icon> -->
       </mat-form-field>
@@ -129,13 +131,14 @@
     
         <div class="row text-center mt-4" >
             <div class="col-sm-6 height-50"  routerLink="/ComingSoon" *ngFor="let Service of Services$ | async">
+              
                 <mat-card class="card mb-3" style="max-width: 600px; ">
 
                     <div class="row g-0">
 
                         <div class="col-md-6 text-center mt-4">
 
-                            <img [src]="Service.Service_img"  alt="card" >
+                            <img [src]="Service.Service_img"  alt="card"  class="cardimg">
                         </div>
                         <div class="col-md-6">
                             <div class="card-body">
