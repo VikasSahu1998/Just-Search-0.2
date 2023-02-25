@@ -10,4 +10,5 @@ export interface addService{
     Service_Price:string;
     Service_img:any;
     Service_Pbrand:string;
+    Service_categories:string;
 }

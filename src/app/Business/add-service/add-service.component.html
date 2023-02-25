@@ -23,15 +23,30 @@
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Product Url</mat-label>
+                        <mat-label>Image Url</mat-label>
                         <input matInput placeholder="Enter Product url" formControlName="Url">
                         <mat-icon matSuffix>perm_identity</mat-icon>
 
                         <mat-error
                             *ngIf="addServiceForm.get('Url')?.invalid && (addServiceForm.get('Url')?.dirty || addServiceForm.get('Url')?.touched) && addServiceForm.get('Url')?.errors?.required">
-                            Product Url is <strong>required</strong>
+                            Image Url is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="example-full-width">
+                        <mat-label>Categories</mat-label>
+                        <mat-select formControlName="categories" required>
+                          <mat-option>--</mat-option>
+                          <mat-option *ngFor="let animal of categories" [value]="animal">
+                            {{animal.title}}
+                          </mat-option>
+                        </mat-select>
+                        <mat-error
+                        *ngIf="addServiceForm.get('categories')?.invalid && (addServiceForm.get('categories')?.dirty || addServiceForm.get('categories')?.touched) && addServiceForm.get('categories')?.errors?.required">
+                        Product Details is <strong>required</strong>
+                    </mat-error>
+                      </mat-form-field>
+
 
                     <mat-form-field class="example-full-width" appearance="outline">
                         <mat-label>Product Details</mat-label>

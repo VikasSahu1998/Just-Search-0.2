@@ -24,9 +24,9 @@ export class AddServiceComponent {
     Service_address: '',
     Service_Details: '',
     Service_Price: '',
-    Service_img: '',
-
+    Service_img: undefined,
     Service_Pbrand: '',
+    Service_categories: ''
   }
 
   addServiceForm: FormGroup | any;
@@ -43,6 +43,7 @@ export class AddServiceComponent {
       Price: new FormControl('', [Validators.required,]),
       Details: new FormControl('', [Validators.required,]),
       Url: new FormControl('', [Validators.required,]),
+      categories : new FormControl('', [Validators.required,]),
     },);
     this.getAllNotes()
   }
@@ -59,6 +60,7 @@ export class AddServiceComponent {
     this.serviceObj.Service_address = value.address;
     this.serviceObj.Service_Details = value.Details;
     this.serviceObj.Service_img = value.Url;
+    this.serviceObj.Service_categories=value.categories;
     if (this.addServiceForm.valid) {
       this.api.addService(this.serviceObj).then((service) => {
         if (service) {
@@ -76,5 +78,51 @@ export class AddServiceComponent {
       this.serviceData = res;
     })
   }
+
+  categories = [
+    {
+      title: 'RESTAURANTS',
+        },
+    {
+      title: 'DOCTORS',
+    },
+    {
+      title: 'REAL ESTATE',
+    },
+    {
+      title: 'SHOP ONLINE',
+    },
+    {
+      title: 'TRAVEL',
+    },
+    {
+      title: 'REPAIR',
+    },
+    {
+      title: 'LOANS',
+    },
+    {
+      title: 'AUTO MOBILES',
+    },
+    {
+      title: 'ON DEMAND SERVICE',
+    },
+    {
+      title: 'WEDDING',
+    },
+    {
+      title: 'JOBS',
+    },
+    {
+      title: 'PERSONAL CARE',
+     
+    },
+    {
+      title: 'DAILY NEEDS',
+    },
+    {
+      title: 'FLOWERS',
+    },
+     ];
 }
 
