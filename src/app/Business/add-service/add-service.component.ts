@@ -12,7 +12,7 @@ import { addService } from 'src/app/shared/addservice'
 })
 export class AddServiceComponent {
 
-
+  categories:any;
   serviceDetails: any;
   serviceData: any = [];
   serviceObj: addService = {
@@ -46,6 +46,51 @@ export class AddServiceComponent {
       categories : new FormControl('', [Validators.required,]),
     },);
     this.getAllNotes()
+    this.categories = [
+      {
+        title: 'RESTAURANTS',
+          },
+      {
+        title: 'DOCTORS',
+      },
+      {
+        title: 'REAL ESTATE',
+      },
+      {
+        title: 'SHOP ONLINE',
+      },
+      {
+        title: 'TRAVEL',
+      },
+      {
+        title: 'REPAIR',
+      },
+      {
+        title: 'LOANS',
+      },
+      {
+        title: 'AUTO MOBILES',
+      },
+      {
+        title: 'ON DEMAND SERVICE',
+      },
+      {
+        title: 'WEDDING',
+      },
+      {
+        title: 'JOBS',
+      },
+      {
+        title: 'PERSONAL CARE',
+       
+      },
+      {
+        title: 'DAILY NEEDS',
+      },
+      {
+        title: 'FLOWERS',
+      },
+       ];
   }
 
   oncategoriesubmit() {
@@ -79,50 +124,6 @@ export class AddServiceComponent {
     })
   }
 
-  categories = [
-    {
-      title: 'RESTAURANTS',
-        },
-    {
-      title: 'DOCTORS',
-    },
-    {
-      title: 'REAL ESTATE',
-    },
-    {
-      title: 'SHOP ONLINE',
-    },
-    {
-      title: 'TRAVEL',
-    },
-    {
-      title: 'REPAIR',
-    },
-    {
-      title: 'LOANS',
-    },
-    {
-      title: 'AUTO MOBILES',
-    },
-    {
-      title: 'ON DEMAND SERVICE',
-    },
-    {
-      title: 'WEDDING',
-    },
-    {
-      title: 'JOBS',
-    },
-    {
-      title: 'PERSONAL CARE',
-     
-    },
-    {
-      title: 'DAILY NEEDS',
-    },
-    {
-      title: 'FLOWERS',
-    },
-     ];
+  
 }
 
